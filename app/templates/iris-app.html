@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <!-- Main content -->
+
+    <section class="row">
+      <div class="grid">
+
+        <!-- Details -->
+
+        <section class="col-2-3">
+          <h5>Iris prediction application</h5>
+          <p>Introduce the 4 requested features in the right to get a prediction!</p>
+          {% with prediction = get_flashed_messages(category_filter=["prediction"]) %}
+          {% if prediction %}
+          <br><br>
+          <h5>Prediction results</h5>
+          {% for pred in prediction %}
+          <p> {{ pred }} </p>
+          {% endfor %}
+          {% endif %}
+          {% endwith %}
+
+          {% with probabilities = get_flashed_messages(category_filter=["probability"]) %}
+          {% if probabilities %}
+          <ul>
+              {% for probability in probabilities %}
+              <li>{{ probability }}</li>
+              {% endfor %}
+          </ul>
+          {% endif %}
+          {% endwith %}
+        </section><!--
+
+        Registration form
+
+      --><form class="col-1-3" action="" method="post">
+          {{ form.hidden_tag() }}
+          <p>
+              {{ form.sepallength.label }}<br>
+              {{ form.sepallength(size=32) }}<br>
+              {% for error in form.sepallength.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.sepalwidth.label }}<br>
+              {{ form.sepalwidth(size=32) }}<br>
+              {% for error in form.sepalwidth.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.petallength.label }}<br>
+              {{ form.petallength(size=32) }}<br>
+              {% for error in form.petallength.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.petalwidth.label }}<br>
+              {{ form.petalwidth(size=32) }}<br>
+              {% for error in form.petalwidth.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>{{ form.submit() }}</p>
+      </form>
+
+      </div>
+    </section>
+
+{% endblock %}

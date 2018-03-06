@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <!-- Main content -->
+
+    <section class="row">
+      <div class="grid">
+
+        <!-- Project 1 -->
+
+        <section class="lead" id="aaron-irizarry">
+
+          <div class="col-2-3">
+
+            <h2>Project 1</h2>
+            <h5>Doing great things with ML</h5>
+            <p>Project info long text here</p>
+            <h5>About the project</h5>
+            <p>Project alt info long text here</p>
+          </div><!--
+          --><aside class="col-1-3">
+            <div class="speaker-info">
+              <a href="{{ url_for('projects') }}">
+                <img src="{{ url_for('static',filename='images/projects.png') }}" alt="Articles">
+              </a>
+            </div>
+          </aside>
+
+        </section>
+
+        <!-- Project 2 -->
+
+        <section class="lead" id="aaron-irizarry">
+
+          <div class="col-2-3">
+
+            <h2>Project 2</h2>
+            <h5>Doing great things with ML</h5>
+            <p>Project info long text here</p>
+            <h5>About the project</h5>
+            <p>Project alt info long text here</p>
+          </div><!--
+          --><aside class="col-1-3">
+            <div class="speaker-info">
+              <a href="{{ url_for('projects') }}">
+                <img src="{{ url_for('static',filename='images/projects.png') }}" alt="Articles">
+              </a>
+            </div>
+          </aside>
+
+        </section>
+
+      </div>
+    </section>
+
+{% endblock %}

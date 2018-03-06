@@ -1,0 +1,5 @@
+Class Type -> Class Name
+
+1 -> Iris-setosa
+2 -> Iris-versicolor
+3 -> Iris-virginica

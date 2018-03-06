@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <section class="row-alt">
+      <div class="lead container">
+        <aside class="col-1-3">
+          <div class="speaker-info">
+            <img src="{{ url_for('static',filename='images/ignacio-vilaplana.jpg') }}" alt="Ignacio Vilaplana">
+            <ul>
+              <li><a href="https://twitter.com/oxanozaep">@oxanozaep</a></li>
+              <li><a href="https://www.linkedin.com/in/ignacio-vilaplana/">LinkedIn</a></li>
+              <li><a href="https://github.com/oxanozaep">GitHub</a></li>
+            </ul>
+          </div>
+        </aside><!--
+        --><div class="col-2-3">
+          <h2>Data Scientist</h2>
+          <p>I'm a Data Science enthusiast with a Financial Risk background based in Madrid, Spain.</p>
+          <p>Please check all my projects and articles and feel free to <a href="mailto:ignacio.vilaplana.sanchez@gmail.com?Subject=Hi!">contact!</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="grid">
+
+        <!-- Articles -->
+
+        <section class="teaser col-1-3">
+          <h5>Articles</h5>
+          <a href="{{ url_for('articles') }}">
+            <img src="{{ url_for('static',filename='images/articles.jpg') }}" alt="Articles">
+          </a>
+          <p>Please have a look at my recent articles about Data Science hottest topics.</p>
+        </section><!--
+
+        Projects
+
+        --><section class="teaser col-1-3">
+          <h5>Projects</h5>
+          <a href="{{ url_for('projects') }}">
+            <img src="{{ url_for('static',filename='images/projects.png') }}" alt="Projects">
+          </a>
+          <p>I'll keep posting here links to my GitHub project pages</p>
+        </section><!--
+
+        Iris App
+
+        --><section class="teaser col-1-3">
+          <h5>Iris App</h5>
+          <a href="{{ url_for('irisapp') }}">
+            <img src="{{ url_for('static',filename='images/iris-app.png') }}" alt="Iris App">
+          </a>
+          <p>This is a sample app to show how to integrate a Machine Learning prediction in a website.</p>
+        </section>
+
+      </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <title>Ignacio Vilaplana - Personal Website</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='stylesheets/main.css') }}">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,300,400">
+  </head>
+
+  <body>
+
+    <!-- Header -->
+
+    <header class="primary-header container group">
+      <h1 class="logo">
+        <a href="{{ url_for('index') }}">Ignacio <br> Vilaplana</a>
+      </h1>
+      <h3 class="tagline"> </h3>
+      <nav class="nav primary-nav">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li><!--
+          --><li><a href="{{ url_for('articles') }}">Articles</a></li><!--
+          --><li><a href="{{ url_for('projects') }}">Projects</a></li><!--
+          --><li><a href="{{ url_for('irisapp') }}">Iris App</a></li><!--
+          --><li><a href="{{ url_for('resume') }}">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+
+    <footer class="primary-footer container group">
+
+      <nav class="nav">
+        <ul>
+          <li><a href="{{ url_for('index') }}">Home</a></li><!--
+          --><li><a href="{{ url_for('articles') }}">Articles</a></li><!--
+          --><li><a href="{{ url_for('projects') }}">Projects</a></li><!--
+          --><li><a href="{{ url_for('irisapp') }}">Iris App</a></li><!--
+          --><li><a href="{{ url_for('resume') }}">Resume</a></li>
+        </ul>
+      </nav>
+
+    </footer>
+
+  </body>
+</html>
