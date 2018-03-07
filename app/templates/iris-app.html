@@ -11,6 +11,85 @@
         <section class="col-2-3">
           <h5>Iris prediction application</h5>
           <p>Introduce the 4 requested features in the right to get a prediction!</p>
+          <br><br>
+          <table>
+
+            <thead>
+              <tr>
+                <th>
+                  <p>Flower type</p>
+                </th>
+                <th>
+                  <p>Sepal length</p>
+                </th>
+                <th>
+                  <p>Sepal width</p>
+                </th>
+                <th>
+                  <p>Petal length</p>
+                </th>
+                <th>
+                  <p>Petal width</p>
+                </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="schedule-offset">
+                  <p>Iris Setosa</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>4.3 – 5.8</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>2.3 – 4.4</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>1.0 – 1.9</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>0.1 – 0.6</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="schedule-offset" >
+                  <p>Iris Versicolor</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>4.9 – 7.0</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>2.0 – 3.4</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>3.0 – 5.1</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>1.0 – 1.8</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="schedule-offset" >
+                  <p>Iris Virginica</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>4.9 – 7.9</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>2.2 – 3.8</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>4.5 – 6.9</p>
+                </td>
+                <td class="schedule-offset">
+                  <p>1.4 - 2.5</p>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
           {% with prediction = get_flashed_messages(category_filter=["prediction"]) %}
           {% if prediction %}
           <br><br>

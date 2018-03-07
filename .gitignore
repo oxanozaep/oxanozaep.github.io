@@ -1,3 +1,4 @@
 config.py
 /old
 /__pycache__
+/app/__pycache__
